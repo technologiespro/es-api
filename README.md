@@ -33,7 +33,7 @@ npm install -g npm forever grunt-cli
 
 `npm install`
 
-- for run es wrapper server `sh restart.sh`
+- for run es wrapper server `sh restart.sh` after start available on http://your-server-ip:2292/api/v1/q
 - for stop server `sh stop.sh`
 - for logs view `forever list` > logfile > `tail -f /home/yourUser/.forever/xXXXX.log`
 
@@ -61,7 +61,7 @@ server {
         listen 80;
         listen 443 ssl;
         server_name es-wrapper.yoursite.com;
-        client_max_body_size 10M;
+        client_max_body_size 2M;
         location / {
         proxy_pass http://localhost:2292;
         proxy_set_header X-Forwarded-Proto $scheme;
