@@ -54,7 +54,7 @@ server {
 
 Send POST requests in json format to your api https://es-wrapper.yoursite.com/api/v1/q
 
-Example query
+- Example query
 
 ```json
 {
@@ -78,9 +78,10 @@ Example query
 
 ```
 
-Example with axios
+- Example with axios https://github.com/technologiespro/es-api/blob/master/tests/test-q.js
 
-`npm install axios`
+
+
 
 
 
