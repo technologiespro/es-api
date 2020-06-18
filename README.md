@@ -48,7 +48,33 @@ server {
 
 - for ssl install nginx certbot, instruction here https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
 
+## API
 
+Send POST requests in json format to your api https://es-wrapper.yoursite.com/api/v1/q
+
+example query
+
+```json
+{
+"query": {
+"bool": {
+"must": [
+{
+"term": {
+"block_data.block_num": 19421114
+}
+},
+{
+"term": {
+"operation_history.trx_in_block": 0
+}
+}
+]
+}
+}
+}
+
+```
 
 
 
