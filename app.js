@@ -6,6 +6,9 @@ var logger = require('morgan');
 const jsonFile = require('jsonfile');
 const config = jsonFile.readFileSync('./config.json')
 
+const checkIpInList = require('./utils/checkip.js');
+const requestIp = require('request-ip');
+
 process.env.PORT = config.port;
 console.log("Running on port:", process.env.PORT);
 
@@ -33,6 +36,20 @@ if (config.nocache) {
     next()
   })
 }
+
+app.use(async function (req, res, next) {
+  if (config.allowFrom.length > 0) {
+    const ip = requestIp.getClientIp(req);
+    console.log('ip', req.url, ip)
+    if (!checkIpInList(config.allowFrom, ip, true)) {
+      res.sendStatus(403);
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
 
 /** SET HEADERS - need edit rules **/
 app.use(function (req, res, next) {
