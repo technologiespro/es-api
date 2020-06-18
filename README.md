@@ -8,8 +8,41 @@
 
 `npm install`
 
-## Settings
+## Configure
 
+`mv sample.config.json config.json`
+
+- port - app port
+- esApi - url to connection ES
+
+## Nginx setup
+
+`sudo apt install nginx`
+
+`cd /etc/nginx/sites-available`
+
+`sudo nano es-wrapper`
+
+insert config
+
+```
+server {
+        listen 80;
+        listen 443 ssl;
+        server_name es-wrapper.yoursite.com;
+        client_max_body_size 10M;
+        location / {
+        proxy_pass http://localhost:2292;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+       }
+}
+
+```
 
 
 
