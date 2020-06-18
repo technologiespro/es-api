@@ -79,7 +79,7 @@ server {
 
 - save file: CTRL+O, CTRL+X
 - `sudo ln -s /etc/nginx/sites-available/es-wrapper /etc/nginx/sites-enabled/es-wrapper`
-
+- `sudo nginx -t`
 - for ssl install nginx certbot, instruction here https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
 - *If you do not have your own DNS server, you can use https://cloudflare.com just setting up A-record
 
