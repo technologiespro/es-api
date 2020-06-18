@@ -10,7 +10,8 @@ router.post('/v1/q', async function (req, res, next) {
     try {
         result = (await axios.get(
             CONFIG.esApi,
-            req.body, {
+            {
+                data: req.body,
                 headers: {
                     'Content-Type': 'application/json',
                 }
