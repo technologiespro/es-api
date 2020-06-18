@@ -23,6 +23,7 @@ npm install -g npm forever grunt-cli
 
 - for run es wrapper server `sh restart.sh`
 - for stop server `sh stop.sh`
+- for logs view `forever list` > logfile > `tail -f /home/yourUser/.forever/xXXXX.log`
 
 ## Configure
 
