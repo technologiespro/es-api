@@ -113,9 +113,22 @@ Send POST requests in json format to your api https://es-wrapper.yoursite.com/ap
 
 ```
 
+
+### Curl test
+
+```
+curl -X POST 'https://es.xbts.io/api/v1/q' -H 'Content-Type: application/json' -d '
+{
+        "query" : {
+                "bool" : { "must" : [{"term": { "account_history.account.keyword": "1.2.282"}}, {"range": {"block_data.block_time": {"gte": "2015-10-26T00:00:00", "lte": "2015-10-29T23:59:59"}}}] }
+        }
+}
+'
+```
+
 - Example with axios https://github.com/technologiespro/es-api/blob/master/tests/test-q.js
 
-- More examples https://dev.bitshares.works/en/master/supports_dev/elastic_search_plugin.html?highlight=http%3A%2F%2Flocalhost%3A9200%2F#get-operations-by-account-time-and-operation-type
+- More examples https://dev.bitshares.works/en/master/supports_dev/elastic_search_plugin.html#get-operations-by-account-time-and-operation-type
 
 
 
