@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios')
+const jsonFile = require('jsonfile')
 const CONFIG = jsonFile.readFileSync('./config.json')
 
 /* GET home page. */
