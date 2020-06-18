@@ -12,8 +12,11 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "ip": "^1.1.5",
     "jsonfile": "^6.0.1",
+    "lodash": "^4.17.15",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "request-ip": "^2.1.3"
   }
 }
