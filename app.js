@@ -38,8 +38,6 @@ if (config.nocache) {
 
 app.use(async function (req, res, next) {
   let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  console.log(ip)
-
   if (config.allowFrom.length > 0) {
     if (!checkIpInList(config.allowFrom, ip, true)) {
       res.sendStatus(403);

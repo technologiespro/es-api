@@ -17,7 +17,7 @@ router.post('/v1/q', async function (req, res, next) {
                 }
             })).data
     } catch (e) {
-
+        console.log(e.code)
     }
     await res.json(result)
 });
