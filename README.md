@@ -58,22 +58,22 @@ example query
 
 ```json
 {
-"query": {
-"bool": {
-"must": [
-{
-"term": {
-"block_data.block_num": 19421114
-}
-},
-{
-"term": {
-"operation_history.trx_in_block": 0
-}
-}
-]
-}
-}
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term": {
+                        "block_data.block_num": 19421114
+                    }
+                },
+                {
+                    "term": {
+                        "operation_history.trx_in_block": 0
+                    }
+                }
+            ]
+        }
+    }
 }
 
 ```
