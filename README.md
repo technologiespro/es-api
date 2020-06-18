@@ -33,10 +33,6 @@ npm install -g npm forever grunt-cli
 
 `npm install`
 
-- for run es wrapper server `sh restart.sh` after start available on http://your-server-ip:2292/api/v1/q
-- for stop server `sh stop.sh`
-- for logs view `forever list` > logfile > `tail -f /home/yourUser/.forever/xXXXX.log`
-
 ## Configure
 
 `mv sample.config.json config.json`
@@ -45,6 +41,12 @@ npm install -g npm forever grunt-cli
 - esApi - url to connection ES
 - nocache - disable web cache
 - allowFrom - allow from all, ip or domain ["yoursite.com","127.0.0.1"] or ["*"] - allow from all (in dev process)
+
+## Start server
+
+- for run es wrapper server `sh restart.sh` after start available on http://your-server-ip:2292/api/v1/q
+- for stop server `sh stop.sh`
+- for logs view `forever list` > logfile > `tail -f /home/yourUser/.forever/xXXXX.log`
 
 ## Nginx setup
 
