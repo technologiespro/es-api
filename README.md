@@ -1,6 +1,6 @@
 # Elastic Search API wrapper server for Bitshares blockchain
 
-# NodeJS Setup
+## NodeJS Setup
 
 ```
 sudo apt-get install build-essential g++ python git curl ntp htop nmon iftop nano -y
