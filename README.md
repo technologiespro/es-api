@@ -28,7 +28,7 @@ npm install -g npm forever grunt-cli
 - port - app port
 - esApi - url to connection ES
 - nocache - disable web cache
-- allowFrom - allow from all, ip or domain ["yoursite.com","127.0.0.1"] or ["*"] - allow from all
+- allowFrom - allow from all, ip or domain ["yoursite.com","127.0.0.1"] or ["*"] - allow from all (in dev process)
 
 ## Nginx setup
 
