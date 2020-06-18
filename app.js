@@ -28,15 +28,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 if (config.nocache) {
   app.set('etag', false)
-
   app.use((req, res, next) => {
     res.set('Cache-Control', 'no-store')
     next()
   })
-
 }
-
-
 
 /** SET HEADERS - need edit rules **/
 app.use(function (req, res, next) {
