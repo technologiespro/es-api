@@ -80,7 +80,7 @@ Send POST requests in json format to your api https://es-wrapper.yoursite.com/ap
 
 - Example with axios https://github.com/technologiespro/es-api/blob/master/tests/test-q.js
 
-
+- More examples https://dev.bitshares.works/en/master/supports_dev/elastic_search_plugin.html?highlight=http%3A%2F%2Flocalhost%3A9200%2F#get-operations-by-account-time-and-operation-type
 
 
 
