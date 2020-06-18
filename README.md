@@ -21,6 +21,9 @@ npm install -g npm forever grunt-cli
 
 `npm install`
 
+- for run es wrapper server `sh restart.sh`
+- for stop server `sh stop.sh`
+
 ## Configure
 
 `mv sample.config.json config.json`
