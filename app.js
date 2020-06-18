@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const jsonFile = require('jsonfile');
+process.env.PORT = jsonFile.readFileSync('./config.json').port;
+console.log("Running on port:", process.env.PORT);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
