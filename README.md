@@ -117,7 +117,7 @@ Send POST requests in json format to your api https://es-wrapper.yoursite.com/ap
 ### Curl test
 
 ```
-curl -X POST 'https://es.xbts.io/api/v1/q' -H 'Content-Type: application/json' -d '
+curl -X POST 'https://es-wrapper.yoursite.com/api/v1/q' -H 'Content-Type: application/json' -d '
 {
         "query" : {
                 "bool" : { "must" : [{"term": { "account_history.account.keyword": "1.2.282"}}, {"range": {"block_data.block_time": {"gte": "2015-10-26T00:00:00", "lte": "2015-10-29T23:59:59"}}}] }
