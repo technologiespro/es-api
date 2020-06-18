@@ -1,0 +1,4 @@
+{
+  "port": 2292,
+  "esApi": "http://localhost:9200/bitshares-*/data/_search"
+}
