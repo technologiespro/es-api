@@ -25,7 +25,7 @@ nvm alias default 10.21.0
 npm install -g npm forever grunt-cli
 ```
 
-## Install
+## Install ES Wrapper Server
 
 `git clone https://github.com/technologiespro/es-api.git`
 
