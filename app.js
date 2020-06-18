@@ -4,7 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const jsonFile = require('jsonfile');
-process.env.PORT = jsonFile.readFileSync('./config.json').port;
+const config = jsonFile.readFileSync('./config.json')
+
+process.env.PORT = config.port;
 console.log("Running on port:", process.env.PORT);
 
 var indexRouter = require('./routes/index');
@@ -23,6 +25,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+if (config.nocache) {
+  app.set('etag', false)
+
+  app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store')
+    next()
+  })
+
+}
+
+
 
 /** SET HEADERS - need edit rules **/
 app.use(function (req, res, next) {
