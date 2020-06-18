@@ -1,5 +1,17 @@
 # Elastic Search API wrapper server for Bitshares blockchain
 
+Ubuntu
+
+## Create a user if necessary
+
+```
+sudo apt-get update && sudo apt-get dist-upgrade -y
+adduser yourusername
+usermod -a -G sudo yourusername
+cd /home/yourusername
+su yourusername
+```
+
 ## NodeJS Setup
 
 ```
