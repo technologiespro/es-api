@@ -23,7 +23,7 @@
 
 `sudo nano es-wrapper`
 
-insert config
+- insert config
 
 ```
 server {
@@ -43,6 +43,14 @@ server {
 }
 
 ```
+
+- save file: CTRL+O, CTRL+X
+
+- for ssl install nginx certbot, instruction here https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
+
+
+
+
 
 
 
