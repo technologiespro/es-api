@@ -6,6 +6,6 @@ let qu = {
     }
 }
 
-axios.post('https://es-wrapper.yoursite.com/api/v1/q', qu).then(function(data){
-    console.log(data.data.hits.hits)
+axios.post('http://localhost:2292/api/v1/q', qu).then(function(data){
+    console.log(data.data)
 })
